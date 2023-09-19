@@ -7,11 +7,84 @@
 </head>
 <body>
     <div class="container">
-        <form action="">
+        <form action="" enctype="multipart/form-data">
             <div>
                 <label for="name">ФИО</label>
-                <input id="name" type="text" placeholder="ФИО" value="">
+                <input id="name" type="text" placeholder="ФИО" value="" required>
             </div>
+            <div>
+                <label for="email">email</label>
+                <input id="email" type="email" placeholder="email" value="">
+            </div>
+            <div>
+                <label for="tel">tel</label>
+                <input id="tel" type="tel" placeholder="tel" value="">
+            </div>
+            <div>
+                <label for="number">number</label>
+                <input id="number" type="number" placeholder="number" value="">
+            </div>
+            <div>
+                <label for="password">password</label>
+                <input id="password" type="password" placeholder="password" value="">
+            </div>
+            <div>
+                <label for="file-upload">Выберите изображение:</label>
+                <input type="file" id="file-upload" name="file-upload" accept="image/*">
+            </div>
+            <div>
+                <label for="date">date</label>
+                <input id="date" type="date" value="">
+            </div>
+            <div>
+                <label for="color">color</label>
+                <input id="color" type="color" value="">
+            </div>
+            <div>
+                <label for="blue">blue</label>
+                <input id="blue" type="checkbox" name="colors" value="">
+                <label for="red">red</label>
+                <input id="red" type="checkbox" name="colors" value="">
+            </div>
+            <div>
+                <label for="blue2">blue</label>
+                <input id="blue2" type="radio" name="colors2" value="">
+                <label for="red2">red</label>
+                <input id="red2" type="radio" name="colors2" value="">
+            </div>
+            <div>
+                <label for="textarea"><textarea</label>
+                <textarea id="textarea" name="text" rows="4" cols="50"></textarea>
+            </div>
+            <div>
+                <label for="fruits">fruits</label>
+                <select name="fruits" id="fruits">
+                    <option value="apple">Apple</option>
+                    <option value="banana">Banana</option>
+                    <option value="orange">Orange</option>
+                </select>
+            </div>
+            <div>
+                <label for="multy-fruits">multy fruits</label>
+                <select name="fruits" id="multy-fruits" multiple>
+                    <option value="apple">Apple</option>
+                    <option value="banana">Banana</option>
+                    <option value="orange">Orange</option>
+                </select>
+            </div>
+            <div>
+                <label for="text-hidden">text-hidden</label>
+                <input id="text-hidden" type="text" placeholder="text-hidden" value="" hidden="">
+            </div>
+            <div>
+                <label for="text-disabled">text-disabled</label>
+                <input id="text-disabled" type="text" placeholder="text-disabled" value="" disabled>
+            </div>
+            <div>
+                <label for="text-readonly">text-readonly</label>
+                <input id="text-readonly" type="text" placeholder="text-readonly" value="readonly" readonly>
+            </div>
+
 
             <!-- по умолчанию type="submit" -->
             <button>Отправить</button>
