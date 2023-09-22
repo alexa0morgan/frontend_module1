@@ -13,15 +13,25 @@
             margin-bottom: 50px;
         }
         /* Большая специфичность */
-        #ddd .bcde span{
+        .bcde span{             /* delete #bcde */
             color: green;
         }
+
         .list span{
             color: blue;
         }
-        .user-content h2{
+        .user-content > h2{
             color: coral;
         }
+
+        [href^="https"] {
+            color: red;
+        }
+
+        .ordered-list li + li {
+            margin-top: 10px;
+        }
+
     </style>
 </head>
 <body class="page container">
