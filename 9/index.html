@@ -83,18 +83,19 @@
             background-color: #cb603e;
         }
 
-        .page__element input::placeholder {
+        input::placeholder {
             color: red;
         }
 
-        .page__element input[readonly]::placeholder {
+        input[readonly]::placeholder {
             font-weight: bold;
             color: darkmagenta;
         }
 
-        .page__element input[disabled]::placeholder {
+        input:disabled {
             font-weight: bold;
             color: gold;
+            background-color: #00BCD4;
         }
 
         .list-links__item:link {
