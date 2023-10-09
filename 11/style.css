@@ -1,3 +1,8 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+
 h1,
 h2,
 h3,
@@ -5,7 +10,7 @@ p,
 ol,
 ul,
 body {
-  margin: 0;
+    margin: 0;
 }
 
 th,
@@ -15,25 +20,25 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
-  font-weight: inherit;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 img {
-  display: block;
-  vertical-align: middle;
-  max-width: 100%;
-  height: auto;
+    display: block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
 }
 
 
-.truncate{
+.truncate {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.container{
+.container {
     max-width: 980px;
     width: 100%;
     margin: 0 auto;
@@ -44,7 +49,41 @@ img {
     margin-top: 15px;
 }
 
-table{
+table {
     width: 100%;
     border-collapse: collapse;
+}
+
+.underline-bold {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.heading-1, .heading-2, .heading-3 {
+    font-weight: 700;
+}
+
+.heading-1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    border: #0710e1 solid 2px;
+    padding: 5px;
+}
+.heading-2 {
+    font-size: 1.5rem;
+    color: #cb603e;
+}
+.heading-3 {
+    font-size: 1.2rem;
+    color: #72671c;
+}
+
+.words {
+    word-break: break-word;
+}
+
+th, td {
+    border: black solid 1px;
+    text-align: center;
 }
