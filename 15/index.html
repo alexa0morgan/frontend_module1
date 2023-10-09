@@ -5,14 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание 15</title>
     <style>
-        .container{
+        .container {
             max-width: 800px;
             width: 100%;
             margin: 0 auto;
         }
+
+        .grid {
+            display:grid;
+            grid-template-areas:
+                    "item1 item1 item1"
+                    "item2 item3 item4"
+                    "item5 item5 item6"
+                    "item7 item8 ___";
+            gap: 32px;
+            border: #1a2c5d solid 1px;
+        }
+
+        .grid__item {
+            background-color: cadetblue;
+            font-size: 18px;
+            padding: 50px;
+        }
+
+        .grid__item--1 {
+            grid-area: item1;
+        }
+
+        .grid__item--2 {
+            grid-area: item2;
+        }
+
+        .grid__item--3 {
+            grid-area: item3;
+        }
+
+        .grid__item--4 {
+            grid-area: item4;
+        }
+
+        .grid__item--5 {
+            grid-area: item5;
+        }
+
+        .grid__item--6 {
+            grid-area: item6;
+        }
+
+        .grid__item--7 {
+            grid-area: item7;
+        }
+
+        .grid__item--8 {
+            grid-area: item8;
+        }
+
     </style>
 </head>
 <body class="container">
-
+    <div class="grid">
+        <div class="grid__item grid__item--1">
+            1
+        </div>
+        <div class="grid__item grid__item--2">
+            2
+        </div>
+        <div class="grid__item grid__item--3">
+            3
+        </div>
+        <div class="grid__item grid__item--4">
+            4
+        </div>
+        <div class="grid__item grid__item--5">
+            5
+        </div>
+        <div class="grid__item grid__item--6">
+            6
+        </div>
+        <div class="grid__item grid__item--7">
+            7
+        </div>
+        <div class="grid__item grid__item--8">
+            8
+        </div>
+    </div>
 </body>
 </html>
