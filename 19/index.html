@@ -84,6 +84,8 @@
             border: 1px solid black;
             display: flex;
             flex-direction: column;
+            transition: border-color 300ms ease-in;
+
         }
         .item__name{
             margin-bottom: 10px;
@@ -98,12 +100,12 @@
             color: white;
             padding: 5px;
             text-align: center;
-            transition: background-color 150ms ease-in;
+            transition: background-color 300ms ease-in;
         }
         .item__bg{
             background-color: black;
             height: 150px;
-            transition: background-color 150ms ease-in;
+            transition: background-color 300ms ease-in;
         }
         .item__body{
             padding: 10px;
@@ -115,6 +117,15 @@
             font-size: 13px;
             color: black;
         }
+
+        .item:hover {
+            border-color: red;
+        }
+
+        .item:hover :is(.item__bg, .item__footer) {
+            background-color: red;
+        }
+
     </style>
 
 
@@ -132,15 +143,20 @@
         </div>
     </div>
 
+
     <h2 class="heading">Задача 2. Иконка</h2>
 
     <style>
         .arrow{
             display: inline-flex;
+            transition: transform 300ms ease-in, color 300ms ease-in;
         }
         .arrow:hover{
+            transform: rotate(180deg);
+            color: red;
         }
     </style>
+
     <div class="container">
         <div class="arrow">
             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -152,12 +168,23 @@
 
     <style>
         .cloud {
-            /* animation: ..... */
+             animation: flying 5s linear infinite;
         }
 
-        /* @keyframes названиеАнимации {
-
-        } */
+         @keyframes flying {
+             25% {
+                 transform: translate(0, 10px);
+             }
+             50% {
+                 transform: translate(0, 0);
+             }
+             75% {
+                 transform: translate(0, -10px);
+             }
+             100% {
+                 transform: translate(0, 0);
+             }
+        }
     </style>
 
     <div class="container">
@@ -191,15 +218,21 @@
         }
 
         .stacked-card__card--1{
+            transform: rotate(5deg);
             background-color: red;
+            z-index: 2;
         }
 
         .stacked-card__card--2{
             background-color: blue;
+            transform: rotate(10deg);
+            z-index: 0;
         }
 
         .stacked-card__card--3{
             background-color: yellow;
+            transform: rotate(15deg);
+            z-index: 1;
         }
 
     </style>
