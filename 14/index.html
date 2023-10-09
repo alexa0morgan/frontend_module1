@@ -21,7 +21,24 @@
             background-color: cadetblue;
             font-size: 18px;
             padding: 50px;
+            order: 0 /*added*/
         }
+        .grid__item--1 {
+            order: 1
+        }
+
+        .grid__item--12 {
+            order: -1
+        }
+
+        .grid__item--9 {
+            grid-column: 1 / 4;
+        }
+
+        .grid__item--5 {
+            grid-column: 2/4;
+        }
+
     </style>
 </head>
 <body>
