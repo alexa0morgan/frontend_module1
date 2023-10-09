@@ -32,6 +32,7 @@
 
         body{
             font-family: sans-serif;
+            background-color: var(--secondary-color);
         }
 
         .container{
@@ -55,7 +56,7 @@
             gap: 10px;
         }
         .item2{
-            border: 1px solid black;
+            border: 1px solid var(--primary-color);
             display: flex;
             flex-direction: column;
         }
@@ -68,24 +69,28 @@
             font-size: 14px;
         }
         .item2__footer{
-            background-color: black;
-            color: white;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
             padding: 5px;
             text-align: center;
         }
         .item2__bg{
-            background-color: black;
+            background-color: var(--primary-color);
             height: 150px;
         }
         .item2__body{
             padding: 10px;
         }
         .item2__date{
-            background-color: #FFEB3B;
+            background-color: var(--tertiary-color);
             padding: 3px;
             display: inline-block;
             font-size: 13px;
-            color: black;
+            color: var(--primary-color);
+        }
+
+        .item2__name, .item2__content {
+            color: var(--primary-color);
         }
 
     </style>
