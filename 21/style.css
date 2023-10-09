@@ -8,7 +8,7 @@ body {
 margin: 0;
 }
 
-ol,li{
+ol, ul, li{
     list-style: none;
     padding: 0;
 }
@@ -29,4 +29,40 @@ body{
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    gap: 5px;
+    height: 30px;
+}
+
+.nav__item a {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    text-decoration: none;
+    background-color: #d3603a;
+    border: 1px solid #98462BFF;
+    color: black;
+    padding: 2px;
+}
+.nav__item a:hover {
+    color: white;
+}
+
+.categories__list {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 25px;
+}
+
+.nav__item {
+    position: relative;
+}
+
+.categories:hover .categories__list {
+    display: flex;
+    flex-direction: column;
 }
