@@ -39,3 +39,34 @@ body{
     width: 100%;
     margin: 0 auto;
 }
+
+.task-list {
+    counter-reset: my-counter;
+}
+
+.task-list li {
+    counter-increment: my-counter;
+}
+
+.task-list li:nth-child(3) {
+    counter-reset: my-counter 4;
+}
+
+.task-list li::before {
+    content: "<" counter(my-counter) "> ";
+}
+
+.task-list li:nth-child(even) {
+    color: rebeccapurple;
+}
+
+.list-mark li::before {
+    display: inline-block;
+    content: "";
+    background-image: url("icon.svg");
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+
+}
