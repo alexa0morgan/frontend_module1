@@ -35,13 +35,13 @@
         .banner {
             border: 1px solid red;
             padding: 20px;
-            position: relative;
+            position: relative; /* add чтобы использовать абсолют*/
         }
 
         .banner__wrapper {
-            position: relative;
+            position: relative; /* add чтобы использовать z-index*/
             height: 300px;
-            z-index: 1;
+            z-index: 1; /* add чтобы сделать выше*/
         }
 
         .banner__img {
@@ -56,10 +56,10 @@
         }
 
         .banner__media {
-            position: absolute;
+            position: absolute; /* add чтобы справа сверху*/
             top: 0;
             right: 0;
-            z-index: 0;
+            z-index: 0; /* add чтобы сделать ниже*/
         }
     </style>
 </head>
