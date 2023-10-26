@@ -5,7 +5,7 @@ p,
 ol,
 ul,
 body {
-margin: 0;
+    margin: 0;
 }
 
 img {
@@ -16,7 +16,8 @@ img {
 *, ::after, ::before {
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: sans-serif;
 }
 
@@ -34,6 +35,7 @@ body{
     .container {
         max-width: 576px;
     }
+
 }
 
 /*ширина экрана >= 768px*/
@@ -43,13 +45,16 @@ body{
         padding-left: 16px;
         padding-right: 16px;
     }
+
 }
+
 /*ширина экрана >= 1024px*/
 @media (min-width: 1024px) {
     .container {
         max-width: 1024px;
     }
 }
+
 /*ширина экрана >= 1292px*/
 @media (min-width: 1292px) {
     .container {
@@ -57,15 +62,18 @@ body{
     }
 }
 
-.color{
+.color {
     background-color: red;
 }
-.page{}
-.page__cell{
+
+.page {
+}
+
+.page__cell {
     margin-bottom: 30px;
 }
 
-.example-text{
+.example-text {
     background-color: yellow;
     padding: 12px;
     font-size: 14px;
@@ -88,13 +96,50 @@ body{
     }
 }
 
-.gallery{
+.gallery {
     display: grid;
-    grid-template-columns: repeat(9, minmax(0, 1fr));
+    /*изменила количество колонок с 9ти на 1, чтобы в мобильной версии была одна колонка*/
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 20px;
-    padding: 0 100px;
+    /*изменила падинг на поменьше*/
+    padding: 0 25px;
 }
-.gallery__item{
+
+.gallery__item {
     height: 200px;
     background-color: beige;
 }
+
+/*добавила все, что ниже для изменения колонок в связи с размерами*/
+@media (min-width: 576px) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0 50px;
+    }
+}
+
+/*ширина экрана >= 768px*/
+@media (min-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 0 60px;
+    }
+}
+
+/*ширина экрана >= 1024px*/
+@media (min-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        padding: 0 80px;
+    }
+}
+
+/*ширина экрана >= 1292px*/
+@media (min-width: 1292px) {
+    .gallery {
+        grid-template-columns: repeat(9, minmax(0, 1fr));
+        padding: 0 100px;
+    }
+}
+
+

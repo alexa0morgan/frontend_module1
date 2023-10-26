@@ -5,7 +5,7 @@ p,
 ol,
 ul,
 body {
-margin: 0;
+    margin: 0;
 }
 
 img {
@@ -16,7 +16,8 @@ img {
 *, ::after, ::before {
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: sans-serif;
 }
 
@@ -36,12 +37,14 @@ body{
         max-width: 1024px;
     }
 }
+
 /*ширина экрана <= 1024px*/
 @media (max-width: 1023px) {
     .container {
         max-width: 768px;
     }
 }
+
 /*ширина экрана <= 768px*/
 @media (max-width: 767px) {
     .container {
@@ -50,20 +53,24 @@ body{
         padding-right: 8px;
     }
 }
+
 /*ширина экрана <= 576px*/
 @media (max-width: 575px) {
 
 }
 
-.color{
+.color {
     background-color: red;
 }
-.page{}
-.page__cell{
+
+.page {
+}
+
+.page__cell {
     margin-bottom: 30px;
 }
 
-.example-text{
+.example-text {
     background-color: yellow;
     font-size: 32px;
     font-weight: 400;
@@ -76,6 +83,7 @@ body{
         font-size: 24px;
     }
 }
+
 /*ширина экрана <= 1024px*/
 @media (max-width: 1023px) {
     .example-text {
@@ -86,13 +94,47 @@ body{
 }
 
 
-.gallery{
+.gallery {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
     gap: 20px;
     padding: 0 100px;
 }
-.gallery__item{
+
+.gallery__item {
     height: 200px;
     background-color: beige;
+}
+
+/*добавила все, что ниже для изменения колонок в связи с размерами*/
+
+/*ширина экрана <= 1292px*/
+@media (max-width: 1292px) {
+    .gallery {
+        grid-template-columns: repeat(9, minmax(0, 1fr));
+        padding: 0 100px;
+    }
+}
+
+/*ширина экрана <= 1024px*/
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        padding: 0 80px;
+    }
+}
+
+/*ширина экрана <= 768px*/
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding: 0 50px;
+    }
 }
