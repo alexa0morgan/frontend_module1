@@ -37,15 +37,15 @@ body{
     align-items: center;
 }
 
-.nav__item a {
+.nav__link {
     display: flex;
     justify-content: center;
     padding: 5px;
     text-decoration: none;
-    color: gray;
+    color: #607D8B;
 }
 
-.nav__item a:hover {
+.nav__link:hover {
     color: black;
 }
 
@@ -54,21 +54,20 @@ body{
     align-items: center;
 }
 
-.nav__item-img {
+.nav__img {
     width: 20px;
     height: 20px;
     filter: invert(1) brightness(0.75);
     margin: 0 8px;
 }
 
-.nav__item-img-home {
+.nav__img-home {
     width: 17px;
     height: 17px;
     transform: translateY(-2px);
     filter: invert(1) brightness(0.5);
 }
 
-.nav__item-img-home:hover {
-
+.nav__img-home:hover {
     filter: none;
 }
